@@ -3,11 +3,7 @@ from shared.models import Banner
 
 
 def home_page_view(request):
-    return render(request, 'index.html')
-
-
-def index(request):
-    banners = Banner.objects.filter(is_active=True)
+    banners = Banner.objects.order_by('-created_at')
 
     return render(request, 'index.html', {
         'banners': banners
