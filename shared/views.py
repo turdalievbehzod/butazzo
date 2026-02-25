@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from shared.models import Banner
+from shared.models import Banner, Gallery
 
 
 def home_page_view(request):
-    banners = Banner.objects.order_by('-created_at')
+    banners = Banner.objects.order_by('created_at')
+    gallery = Gallery.objects.all()
 
     return render(request, 'index.html', {
-        'banners': banners
+        'banners': banners,
+        'gallery': gallery,
     })

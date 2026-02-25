@@ -756,141 +756,29 @@
         <div class="title-block">
             <h1 class="section-title">Gallery</h1>
         </div>
-        <div id="photo_gallery" class="list1">
-            <div class="row loadMore">
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-1.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-1.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
+<div id="photo_gallery" class="list1">
+    <div class="row loadMore">
+        {% for item in gallery %}
+        <div class="col-sm-4 col-md-3 item">
+            <a href="{{ item.image.url }}" class="block fancybox"
+               data-fancybox-group="fancybox">
+                <div class="content">
+                    <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                    <div class="zoom">
+                        <span class="zoom_icon">
+                            <i class="fa fa-search-plus"></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-2.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-2.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-3.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-3.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-4.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-4.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-5.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-5.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-6.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-6.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-7.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-7.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-8.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-8.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-1.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-1.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-2.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-2.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-3.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-3.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 item">
-                    <a href="{% static 'img/photos/gallery-4.jpg' %}" class="block fancybox"
-                       data-fancybox-group="fancybox">
-                        <div class="content">
-                            <img src="{% static 'img/photos/gallery-4.jpg' %}" alt="sample"/>
-                            <div class="zoom">
-                                <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            </a>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center">
+            <p>No gallery images yet.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
         </div>
     </div>
 

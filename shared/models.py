@@ -10,4 +10,15 @@ class Banner(models.Model):
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+
+
+class Gallery(models.Model):
+    image = models.ImageField(upload_to='gallery/')
+    title = models.CharField(max_length=255, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title if self.title else f"Gallery {self.id}"
+
+    class Meta:
+        ordering = ['created_at']
